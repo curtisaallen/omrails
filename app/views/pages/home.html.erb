@@ -5,12 +5,20 @@
 	</div>
 	<div class="span6">		
 <div class="jumbotron">
+
+<% if user_signed_in? %>
+    <h1>You are sign into One Month Rails!</h1>
+<% else %>
+
   <h1>Welcome to One Month Rails!</h1>
   <p>You've found the home page for the <br >
 		<%= link_to "One Month Rails", "https://www.udemy.com" %>
 		application</p>
-  <p><%= link_to "Sign Up", "#", class: "btn btn-primary btn-lg" %>
+  <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 		</p>
+		
+<% end %>		
+		
 </div>		
 		
 		
